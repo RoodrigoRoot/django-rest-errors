@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p class="fs-3">{{ category.name|title }}</p>
+    <div class="container">
+        <p>List of category error codes: {{ category.name|title }}</p>
+        <ul class="list-group">
+            {% for error_code in errors_codes %}
+                <li class="list-group-item list-group-item-action"><strong class="fs-3">{{ error_code.error_code }}</strong>
+                <p>{{ error_code.description|truncatechars:100 }}</p>
+                    <a href="{{ error_code.get_absolut_url }}">Ver más</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock%}

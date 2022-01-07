@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'boostrap/styles.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <title>Catalog Errors</title>
+</head>
+<body>
+{% include 'search.html' %}
+<div class="container mt-1">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+<script src="{% static 'boostrap/bundle.js' %}"></script>
+{% block js %}
+{% endblock js %}
+</html>
