@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p class="fs-2" id="title">{{ error_code.error_code|title }}</p>
+    <p>
+        {{ error_code.description }}
+    </p>
+
+{% endblock %}
+{% block js %}
+    <script>
+
+function load() {
+    document.getElementById('title').innerText = document.getElementById('title').innerText.toUpperCase()
+}
+    window.onload = load;
+    </script>
+{% endblock js %}
