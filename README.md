@@ -4,7 +4,7 @@ This Project is to manage the error response with a body by default like this:
 
     {
         'error_code': 'US001',
-        'messge': 'text for example'
+        'message': 'text for example'
     }
 
 ## Installation
