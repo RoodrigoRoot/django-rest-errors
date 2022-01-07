@@ -34,6 +34,8 @@ This documentation is very simple in terms of desing.
 
 `path('error/', include('error_codes.urls')),`
 
+And now we can visit:
+`http://localhost:8000/error/docs/`
 
 ## Serializers
 
