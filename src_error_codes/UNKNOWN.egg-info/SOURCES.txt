@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+UNKNOWN.egg-info/PKG-INFO
+UNKNOWN.egg-info/SOURCES.txt
+UNKNOWN.egg-info/dependency_links.txt
+UNKNOWN.egg-info/top_level.txt
+error_codes/static/boostrap/bundle.js
+error_codes/static/boostrap/styles.css
+error_codes/templates/base.html
+error_codes/templates/details_category.html
+error_codes/templates/details_errors_codes.html
+error_codes/templates/index.html
+error_codes/templates/not_found.html
+error_codes/templates/search.html
