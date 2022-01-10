@@ -1,6 +1,5 @@
 from rest_framework.exceptions import APIException
 from rest_framework import status
-from django.utils.encoding import force_text
 from error_codes.functions import (get_error_code, check_fields,
                                     create_body_response_error, exists_error_code,
                                     get_fields_errors)
@@ -17,7 +16,7 @@ class CustomErrorException(APIException):
                 body = create_body_response_error(object_error, static_fields)
                 self.detail = body
         else:
-            new_detail = {'message': force_text(self.message), 'error_code': "001"}
+            new_detail = {'message': self.message, 'error_code': "001"}
             if static_fields:
                 new_detail.update(static_fields)
             self.detail = new_detail
