@@ -7,7 +7,7 @@ from error_codes.models import Error, CategoryError
 
 
 def exists_error_code(error_code: str) -> bool:
-    return get_error_model().objects.filter(error_code=error_code).exists()
+    return get_error_model().objects.filter(error_code__icontains=error_code).exists()
 
 
 def get_error_code(error_code: str) -> Error:
