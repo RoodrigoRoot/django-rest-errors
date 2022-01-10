@@ -6,6 +6,8 @@ This Project is to manage the error response with a body by default like this:
         'error_code': 'US001',
         'message': 'text for example'
     }
+    
+the `US001` code can be a row in the database with a message and a description. In the body response we send error_code and message, lastly, the field description is for the documentation of these exceptions.
 
 ## Installation
 
