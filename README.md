@@ -12,7 +12,7 @@ This Project is to manage the error response with a body by default like this:
 After installing this project, we need to have django rest framework installed.
 Once installed:
 
-`pip install django-rest-error==1.0`
+`pip install django-rest-error`
 
 ### Added to settings.py
 
