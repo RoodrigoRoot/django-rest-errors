@@ -1,10 +1,17 @@
-# Django Rest Error Codes
+# Django Rest Error Codes. 
+
+If you need manage errors based on error codes, saved on DB, and show it to other persons, you can use this project for it.
+
+#### Django Rest Error Codes. 
+You can saved errors on DB and use the exception for generate a basic body response with error code and message to show it to the user. 
+You can too see these errors in a template of html and can be used for other areas like QA, Support event Developers for understand the logic for the errors.
+
 
 This Project is to manage the error response with a body by default like this:
 
     {
         'error_code': 'US001',
-        'message': 'text for example'
+        'message': 'An error has ocurred.'
     }
     
 the `US001` code can be a row in the database with a message and a description. In the body response we send error_code and message, lastly, the field description is for the documentation of these exceptions.
