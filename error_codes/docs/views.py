@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from django.shortcuts import render, reverse, redirect
+from django.shortcuts import render, reverse
 from django.views.generic import TemplateView
 from django.views import View
 from error_codes.functions import category_all,  get_category_by_name, get_error_code
@@ -8,11 +8,13 @@ from error_codes.functions import category_all,  get_category_by_name, get_error
 
 class DocsTemplateView(TemplateView):
     template_name = 'index.html'
+    title = 'Rest Error Codes'
+    description = 'In this page you can search and see the errors that are handled in this system'
 
     def get(self, request, *args, **kwargs):
         categories = category_all()
-        title = ''
-        description = ''
+        title = self.title
+        description = self.description
         return render(request, self.template_name, locals())
 
 
