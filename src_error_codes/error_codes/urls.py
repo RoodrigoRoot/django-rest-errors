@@ -9,5 +9,7 @@ urlpatterns = [
     path('category/<str:name>/', CategoriesDocsTemplate.as_view(), name='error-category'),
     path('code/<str:error_code>/', ErrorDocTemplate.as_view(), name='error-code'),
     path('search', SearchDocTemplate.as_view(), name='search'),
+    path('not_found', SearchDocTemplate.as_view(), name='not-found'),
+
 ]
 

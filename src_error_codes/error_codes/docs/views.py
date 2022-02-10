@@ -41,7 +41,7 @@ class SearchDocTemplate(View):
         param_error_code = request.GET.get('value', '')
         error_code = get_error_code(param_error_code)
         if not error_code:
-            url = reverse('not-found')
+            url = reverse('error:not-found')
             return JsonResponse({'url': url}, safe=False)
         url = reverse('error:error-code', kwargs={'error_code': error_code})
         return JsonResponse({'url': url}, safe=False)
