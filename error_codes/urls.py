@@ -1,6 +1,6 @@
 from django.urls import path
 from error_codes.docs.views import (DocsTemplateView, CategoriesDocsTemplate,
-                                    ErrorDocTemplate, SearchDocTemplate)
+                                    ErrorDocTemplate, SearchDocTemplate, CodeNotFound)
 
 app_name = 'error'
 
@@ -9,5 +9,6 @@ urlpatterns = [
     path('category/<str:name>/', CategoriesDocsTemplate.as_view(), name='error-category'),
     path('code/<str:error_code>/', ErrorDocTemplate.as_view(), name='error-code'),
     path('search', SearchDocTemplate.as_view(), name='search'),
+    path('not_found', CodeNotFound.as_view(), name='not-found'),
 ]
 
